@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+      <header>
+        <nav class="flex justify-around item bg-center">
+          <img class="w-16" src="./assets/Group.png" alt="" />
+          <div>
+            <h1 class="text-3xl font-bold">
+              $ <span id="main-blance">4500</span>
+            </h1>
+            <p>Available Balance</p>
+          </div>
+          <button class="btn rounded">Logout</button>
+        </nav>
+        <section class="mt-10">
+          <h1 class="text-2xl font-bold py-6">🔥 Welcome to Payooo!</h1>
+          <p>
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+          <!-- cards -->
+          <div class="card grid grid-cols-3 mt-14 rounded-sm gap-2 p-2">
+            <div id="add-money-box" class="box cursor-pointer border p-4 text-center">
+              <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
+              <h3>Add Money</h3>
+            </div>
+            <div id="cash-out-box" class="box border p-4 text-center">
+              <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
+              <h3>Cash out</h3>
+            </div>
+            <div class="box border p-4 text-center">
+              <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
+              <h3>Pay Bill</h3>
+            </div>
+            <div class="box border p-4 text-center">
+              <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
+              <h3>Transfer money</h3>
+            </div>
+            <div class="box border p-4 text-center">
+              <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
+              <h3>Get Bonus</h3>
+            </div>
+            <div class="box border p-4 text-center">
+              <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
+              <h3>Transaction history</h3>
+            </div>
+          </div>
+
+          <!-- add money -->
+          <section id="add-money">
+            <h2>Add Money</h2>
+            <div class="hero bg-base-200 min-h-screen">
+              <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                  <div class="card-body">
+                    <legend>Select A Bank</legend>
+                    <select class="select">
+                      <option disabled selected>Select bank</option>
+                      <option value="bkash">Bkash</option>
+                      <option value="nagad">Nagad</option>
+                      <option value="dbbl">DBBL</option>
+                    </select>
+
+                    <fieldset class="fieldset">
+                      <label class="label">Mobile number</label>
+                      <input
+                        id="account-number"
+                        type=""
+                        value="01723315895"
+                        class="input"
+                        placeholder="Enter your number"
+                        required
+                      />
+                      <label class="label">Amount</label>
+                      <input
+                        id="amount"
+                        type=""
+                        class="input"
+                        placeholder="Type your amount"
+                        required
+                      />
+                      <label class="label">4 Digit Pin</label>
+                      <input
+                        id="pin"
+                        type=""
+                        value="1234"
+                        class="input"
+                        placeholder="enter 4 Digit Pin"
+                        required
+                      />
+                      <button
+                        id="add-money-btn"
+                        class="btn btn-neutral mt-4 bg-blue-700 rounded-3xl border-none"
+                      >
+                        Add Money
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </header>
+
+      <!-- cash out section -->
+      <section id="cash-out">
+      <h2>Cash Out</h2>
+      
+              <fieldset class="fieldset">
+                <label class="label">Mobile number</label>
+                <input
+                  id="account-number"
+                  type=""
+                  value="01723315895"
+                  class="input"
+                  placeholder="Enter your number"
+                  required
+                />
+                <label class="label">Amount</label>
+                <input
+                  id="cash-out-amount"
+                  type=""
+                  class="input"
+                  placeholder="Type your amount"
+                  required
+                />
+                <label class="label">4 Digit Pin</label>
+                <input
+                  id="cash-out-pin"
+                  type=""
+                  value="1234"
+                  class="input"
+                  placeholder="enter 4 Digit Pin"
+                  required
+                />
+                <button
+                  id="cash-out-btn"
+                  class="btn btn-neutral mt-4 bg-blue-700 rounded-3xl border-none w-80"
+                >
+                  Cash Out
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </section>
+    <script src="script/addMoney.js"></script>
+    <script src="utilities/utilities.js"></script>
+  </body>
+</html>
