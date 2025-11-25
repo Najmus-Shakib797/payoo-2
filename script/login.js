@@ -7,7 +7,7 @@ document
     const pin = document.getElementById("pin").value;
 
     const convertedPin = parseInt(pin);
-    console.log(typeof convertedPin);
+
     if (accountNumber.length === 11) {
       if (convertedPin === 1234) {
         // window.location.href = "main.html";

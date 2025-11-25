@@ -16,6 +16,13 @@ document
         const sum = mainBalance + amount;
         // document.getElementById("main-blance").innerText = sum;
         setInnerTextByIdandValue("main-blance", sum);
+        const transactionContainer = document.getElementById(
+          "transaction-container"
+        );
+        const p = document.createElement("p");
+        p.innerText = `
+        added ${amount} from ${accountNumber} account`;
+        transactionContainer.appendChild(p);
       } else {
         window.alert("pin thik nai");
       }
