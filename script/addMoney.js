@@ -10,7 +10,12 @@ document
     const accountNumber = document.getElementById("account-number").value;
 
     const mainBalance = getInnerTextById("main-blance");
-    console.log(mainBalance);
+    const selectedBank = document.getElementById("all-bank").value;
+
+    if (amount < 0) {
+      alert("give +ve number");
+      return;
+    }
     if (accountNumber.length === 11) {
       if (pin === 1234) {
         const sum = mainBalance + amount;
@@ -19,10 +24,17 @@ document
         const transactionContainer = document.getElementById(
           "transaction-container"
         );
-        const p = document.createElement("p");
-        p.innerText = `
-        added ${amount} from ${accountNumber} account`;
-        transactionContainer.appendChild(p);
+        // const p = document.createElement("p");
+        // p.innerText = `
+        // added ${amount} from ${accountNumber} account`;
+        // transactionContainer.appendChild(p);
+
+        const div = document.createElement("div");
+        div.innerHTML = `
+                <h1>Added balance from ${selectedBank}</h1>
+        <h3>${amount}</h3>
+        <p>account number: ${accountNumber}</p>`;
+        transactionContainer.appendChild(div);
       } else {
         window.alert("pin thik nai");
       }
